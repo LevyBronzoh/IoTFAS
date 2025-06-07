@@ -1,0 +1,282 @@
+INFO:root:Starting capture on wlan0 targeting 192.168.1.100...
+ERROR:root:Capture failed: Interface 'wlan0' not found !
+2025-06-02 18:13:04,008 - INFO - Starting capture on wlan0 targeting 192.168.1.100...
+2025-06-02 18:13:04,080 - ERROR - Unexpected error: Interface 'wlan0' not found !
+2025-06-02 18:17:27,776 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:18:27,793 - WARNING - No packets captured during session
+2025-06-02 18:35:38,977 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:36:38,993 - WARNING - No packets captured during session
+2025-06-02 18:38:02,022 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:39:02,024 - WARNING - No packets captured during session
+2025-06-02 18:42:33,748 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:43:33,758 - WARNING - No packets captured during session
+2025-06-02 18:52:26,686 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:53:26,694 - WARNING - No packets captured during session
+2025-06-02 18:54:56,329 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 18:54:56,342 - ERROR - Unexpected error: 'charmap' codec can't encode character '\U0001f4e1' in position 0: character maps to <undefined>
+2025-06-02 19:06:26,416 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 19:07:28,150 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 19:08:28,160 - WARNING - No packets captured during session
+2025-06-02 19:09:36,702 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 19:10:36,710 - WARNING - No packets captured during session
+2025-06-02 19:11:34,276 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 19:12:34,280 - WARNING - No packets captured during session
+2025-06-02 19:17:21,989 - INFO - Starting capture on Ethernet targeting 192.168.1.1...
+2025-06-02 19:18:21,991 - WARNING - No packets captured during session
+2025-06-02 19:28:59,440 - INFO - Starting capture on Ethernet targeting 192.168.1.77...
+2025-06-02 19:29:59,442 - WARNING - No packets captured during session
+2025-06-02 19:31:01,026 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 19:32:30,669 - INFO - Saved 137749 packets to output\webcam_192.168.1.177_20250602_193101.pcap
+2025-06-02 19:32:30,669 - INFO - Processing output\webcam_192.168.1.177_20250602_193101.pcap (size: 142621.45 KB)
+2025-06-02 19:34:28,622 - INFO - Successfully processed 137749 packets -> output\webcam_192.168.1.177_20250602_193101_processed.json
+2025-06-02 19:35:04,718 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-02 19:35:04,718 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 19:35:04,824 - INFO -  * Restarting with stat
+2025-06-02 19:35:15,237 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 19:36:44,112 - INFO - Saved 123007 packets to output\webcam_192.168.1.177_20250602_193515.pcap
+2025-06-02 19:36:44,112 - INFO - Processing output\webcam_192.168.1.177_20250602_193515.pcap (size: 127445.80 KB)
+2025-06-02 19:38:04,297 - INFO - Successfully processed 123007 packets -> output\webcam_192.168.1.177_20250602_193515_processed.json
+2025-06-02 19:38:10,270 - WARNING -  * Debugger is active!
+2025-06-02 19:38:10,437 - INFO -  * Debugger PIN: 737-680-973
+2025-06-02 19:38:51,174 - INFO - 127.0.0.1 - - [02/Jun/2025 19:38:51] "GET / HTTP/1.1" 200 -
+2025-06-02 20:15:07,795 - INFO - 127.0.0.1 - - [02/Jun/2025 20:15:07] "GET / HTTP/1.1" 200 -
+2025-06-02 20:35:40,063 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 20:36:58,374 - INFO - Saved 77136 packets to output\webcam_192.168.1.177_20250602_203540.pcap
+2025-06-02 20:36:58,375 - INFO - Processing output\webcam_192.168.1.177_20250602_203540.pcap (size: 79003.98 KB)
+2025-06-02 20:37:48,990 - INFO - Successfully processed 77136 packets -> output\webcam_192.168.1.177_20250602_203540_processed.json
+2025-06-02 20:37:53,522 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-02 20:37:53,522 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 20:37:53,580 - INFO -  * Restarting with stat
+2025-06-02 20:38:04,664 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 20:39:38,079 - INFO - Saved 126683 packets to output\webcam_192.168.1.177_20250602_203804.pcap
+2025-06-02 20:39:38,079 - INFO - Processing output\webcam_192.168.1.177_20250602_203804.pcap (size: 131041.49 KB)
+2025-06-02 20:41:06,332 - INFO - Successfully processed 126683 packets -> output\webcam_192.168.1.177_20250602_203804_processed.json
+2025-06-02 20:41:12,293 - WARNING -  * Debugger is active!
+2025-06-02 20:41:12,576 - INFO -  * Debugger PIN: 737-680-973
+2025-06-02 20:50:45,128 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 20:52:13,134 - INFO - Saved 129610 packets to output\webcam_192.168.1.177_20250602_205045.pcap
+2025-06-02 20:52:13,134 - INFO - Processing output\webcam_192.168.1.177_20250602_205045.pcap (size: 133725.93 KB)
+2025-06-02 20:53:26,124 - INFO - Successfully processed 129610 packets -> output\webcam_192.168.1.177_20250602_205045_processed.json
+2025-06-02 20:53:30,065 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-02 20:53:30,066 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 20:53:30,106 - INFO -  * Restarting with stat
+2025-06-02 20:53:53,179 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-02 20:55:32,103 - INFO - Saved 132934 packets to output\webcam_192.168.1.177_20250602_205353.pcap
+2025-06-02 20:55:33,052 - INFO - Processing output\webcam_192.168.1.177_20250602_205353.pcap (size: 136775.18 KB)
+2025-06-02 20:57:30,537 - INFO - Successfully processed 132934 packets -> output\webcam_192.168.1.177_20250602_205353_processed.json
+2025-06-02 20:57:36,549 - WARNING -  * Debugger is active!
+2025-06-02 20:57:36,644 - INFO -  * Debugger PIN: 737-680-973
+2025-06-02 20:59:10,866 - INFO - 192.168.1.144 - - [02/Jun/2025 20:59:10] "GET / HTTP/1.1" 200 -
+2025-06-02 21:00:33,382 - INFO - 127.0.0.1 - - [02/Jun/2025 21:00:33] "GET / HTTP/1.1" 200 -
+2025-06-03 04:12:41,463 - INFO - 192.168.1.177...
+2025-06-03 04:13:41,570 - WARNING - No packets captured during session
+2025-06-03 04:16:32,765 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 04:17:32,767 - WARNING - No packets captured during session
+2025-06-03 04:28:46,145 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 04:29:46,149 - WARNING - No packets captured during session
+2025-06-03 05:11:18,000 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 05:12:47,794 - INFO - Saved 129114 packets to output\webcam_192.168.1.177_20250603_051118.pcap
+2025-06-03 05:12:47,794 - INFO - Processing output\webcam_192.168.1.177_20250603_051118.pcap (size: 133542.24 KB)
+2025-06-03 05:14:33,562 - INFO - Successfully processed 129114 packets -> output\webcam_192.168.1.177_20250603_051118_processed.json
+2025-06-03 05:14:50,172 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-03 05:14:50,172 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 05:14:50,213 - INFO -  * Restarting with stat
+2025-06-03 05:14:58,285 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 05:16:29,839 - INFO - Saved 126517 packets to output\webcam_192.168.1.177_20250603_051458.pcap
+2025-06-03 05:16:29,839 - INFO - Processing output\webcam_192.168.1.177_20250603_051458.pcap (size: 129658.77 KB)
+2025-06-03 05:18:05,515 - INFO - Successfully processed 126517 packets -> output\webcam_192.168.1.177_20250603_051458_processed.json
+2025-06-03 05:18:12,422 - WARNING -  * Debugger is active!
+2025-06-03 05:18:12,665 - INFO -  * Debugger PIN: 296-756-008
+2025-06-03 05:30:09,280 - INFO - 127.0.0.1 - - [03/Jun/2025 05:30:09] "GET / HTTP/1.1" 200 -
+2025-06-03 06:03:25,299 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:04:25,386 - WARNING - No packets captured during session
+2025-06-03 06:04:56,334 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:05:56,336 - WARNING - No packets captured during session
+2025-06-03 06:08:26,875 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:09:26,884 - WARNING - No packets captured during session
+2025-06-03 06:10:47,653 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:11:47,655 - WARNING - No packets captured during session
+2025-06-03 06:12:03,705 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:13:03,716 - WARNING - No packets captured during session
+2025-06-03 06:14:12,797 - INFO - Starting capture on Ethernet targeting 192.168.1.177...
+2025-06-03 06:15:12,798 - WARNING - No packets captured during session
+2025-06-06 22:32:44,376 - ERROR - Could not determine default gateway
+2025-06-06 22:32:44,405 - ERROR - No target IP provided and webcam auto-discovery failed
+2025-06-06 22:34:39,032 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554)
+2025-06-06 22:35:09,128 - INFO - Capture successful: 41324 packets, 42246.05KB
+2025-06-06 22:35:38,243 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177
+2025-06-06 22:36:38,270 - INFO - Capture successful: 83795 packets, 85770.75KB
+2025-06-06 22:36:38,270 - INFO - Processing output\device_192_168_1_177_20250606_223538.pcap (size: 85770.75 KB)
+2025-06-06 22:37:25,817 - INFO - Successfully processed 83795 packets -> output\device_192_168_1_177_20250606_223538_processed.json
+2025-06-06 22:37:31,148 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-06 22:37:31,148 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-06 22:37:31,238 - INFO -  * Restarting with stat
+2025-06-06 22:37:32,512 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177
+2025-06-06 22:38:32,526 - INFO - Capture successful: 66700 packets, 68346.46KB
+2025-06-06 22:38:32,526 - INFO - Processing output\device_192_168_1_177_20250606_223732.pcap (size: 68346.46 KB)
+2025-06-06 22:39:51,374 - INFO - Successfully processed 66700 packets -> output\device_192_168_1_177_20250606_223732_processed.json
+2025-06-06 22:41:51,153 - WARNING -  * Debugger is active!
+2025-06-06 22:41:51,577 - INFO -  * Debugger PIN: 737-680-973
+2025-06-06 22:42:05,895 - INFO - 127.0.0.1 - - [06/Jun/2025 22:42:05] "GET / HTTP/1.1" 200 -
+2025-06-06 22:42:10,505 - INFO - 127.0.0.1 - - [06/Jun/2025 22:42:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-06 23:15:39,927 - INFO -  * Detected change in 'I:\\Client_projects\\capture.py', reloading
+2025-06-06 23:16:01,526 - INFO -  * Restarting with stat
+2025-06-06 23:16:18,229 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177
+2025-06-06 23:17:18,716 - INFO - Capture successful: 83900 packets, 87890.04KB
+2025-06-06 23:17:18,717 - INFO - Processing output\webcam_192_168_1_177_20250606_231618.pcap (size: 87890.04 KB)
+2025-06-06 23:18:09,035 - INFO - Successfully processed 83900 packets -> output\webcam_192_168_1_177_20250606_231618_processed.json
+2025-06-06 23:18:13,900 - WARNING -  * Debugger is active!
+2025-06-06 23:18:13,978 - INFO -  * Debugger PIN: 737-680-973
+2025-06-06 23:33:05,407 - INFO -  * Detected change in 'I:\\Client_projects\\app.py', reloading
+2025-06-06 23:34:48,421 - INFO -  * Restarting with stat
+2025-06-06 23:35:11,764 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554)
+2025-06-06 23:36:11,950 - INFO - Capture successful: 2 packets, 0.17KB
+2025-06-06 23:36:11,950 - INFO - Processing output\webcam_192_168_1_177_20250606_233511.pcap (size: 0.17 KB)
+2025-06-06 23:36:12,000 - INFO - Successfully processed 2 packets -> output\webcam_192_168_1_177_20250606_233511_processed.json
+2025-06-06 23:36:13,114 - WARNING -  * Debugger is active!
+2025-06-06 23:36:13,151 - INFO -  * Debugger PIN: 737-680-973
+2025-06-06 23:38:57,935 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554)
+2025-06-06 23:39:58,000 - INFO - Capture successful: 86000 packets, 88789.72KB
+2025-06-06 23:40:12,514 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554)
+2025-06-06 23:41:12,527 - INFO - Capture successful: 89510 packets, 92493.77KB
+2025-06-06 23:41:12,528 - INFO - Processing output\webcam_192_168_1_177_20250606_234012.pcap (size: 92493.77 KB)
+2025-06-06 23:42:36,175 - INFO - Successfully processed 89510 packets -> output\webcam_192_168_1_177_20250606_234012_processed.json
+2025-06-06 23:43:38,855 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-06 23:43:38,855 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-06 23:43:38,916 - INFO -  * Restarting with stat
+2025-06-06 23:43:47,022 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554)
+2025-06-06 23:44:47,029 - INFO - Capture successful: 79732 packets, 82887.53KB
+2025-06-06 23:44:47,030 - INFO - Processing output\webcam_192_168_1_177_20250606_234347.pcap (size: 82887.53 KB)
+2025-06-06 23:45:43,354 - INFO - Successfully processed 79732 packets -> output\webcam_192_168_1_177_20250606_234347_processed.json
+2025-06-06 23:46:54,587 - WARNING -  * Debugger is active!
+2025-06-06 23:46:54,782 - INFO -  * Debugger PIN: 737-680-973
+2025-06-06 23:47:57,397 - INFO - 127.0.0.1 - - [06/Jun/2025 23:47:57] "GET / HTTP/1.1" 200 -
+2025-06-07 01:06:31,085 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 50KB
+2025-06-07 01:06:31,414 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:07:00,527 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 50KB
+2025-06-07 01:07:00,534 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:07:00,534 - INFO - Processing output\webcam_192_168_1_177_20250607_010700.pcap (size: 1.52 KB)
+2025-06-07 01:07:00,560 - INFO - Successfully processed 1 packets -> output\webcam_192_168_1_177_20250607_010700_processed.json
+2025-06-07 01:07:03,766 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-07 01:07:03,766 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 01:07:03,838 - INFO -  * Restarting with stat
+2025-06-07 01:07:04,844 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 50KB
+2025-06-07 01:07:04,931 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:07:04,931 - INFO - Processing output\webcam_192_168_1_177_20250607_010704.pcap (size: 1.52 KB)
+2025-06-07 01:07:05,016 - INFO - Successfully processed 1 packets -> output\webcam_192_168_1_177_20250607_010704_processed.json
+2025-06-07 01:07:05,050 - WARNING -  * Debugger is active!
+2025-06-07 01:07:05,075 - INFO -  * Debugger PIN: 737-680-973
+2025-06-07 01:07:37,684 - INFO - 127.0.0.1 - - [07/Jun/2025 01:07:37] "GET / HTTP/1.1" 200 -
+2025-06-07 01:14:37,615 - ERROR - Could not determine default gateway
+2025-06-07 01:14:37,616 - ERROR - No target IP provided and webcam auto-discovery failed
+2025-06-07 01:15:25,339 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177, max_size: 100KB
+2025-06-07 01:15:25,512 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:17:37,929 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177, max_size: 1000KB
+2025-06-07 01:17:37,981 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:20:28,058 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:20:28,064 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:20:28,064 - INFO - Processing output\webcam_192_168_1_177_20250607_012028.pcap (size: 1.52 KB)
+2025-06-07 01:20:28,089 - INFO - Successfully processed 1 packets -> output\webcam_192_168_1_177_20250607_012028_processed.json
+2025-06-07 01:20:29,504 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-07 01:20:29,504 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 01:20:29,524 - INFO -  * Restarting with stat
+2025-06-07 01:20:30,727 - INFO - Starting capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:20:30,735 - INFO - Capture successful: 1 packets, 1.52KB
+2025-06-07 01:20:30,736 - INFO - Processing output\webcam_192_168_1_177_20250607_012030.pcap (size: 1.52 KB)
+2025-06-07 01:20:30,740 - INFO - Successfully processed 1 packets -> output\webcam_192_168_1_177_20250607_012030_processed.json
+2025-06-07 01:20:30,764 - WARNING -  * Debugger is active!
+2025-06-07 01:20:30,773 - INFO -  * Debugger PIN: 737-680-973
+2025-06-07 01:20:39,036 - INFO - 127.0.0.1 - - [07/Jun/2025 01:20:39] "GET / HTTP/1.1" 200 -
+2025-06-07 01:21:12,562 - INFO - 127.0.0.1 - - [07/Jun/2025 01:21:12] "GET / HTTP/1.1" 200 -
+2025-06-07 01:21:37,134 - INFO - 127.0.0.1 - - [07/Jun/2025 01:21:37] "GET / HTTP/1.1" 200 -
+2025-06-07 01:25:35,953 - INFO -  * Detected change in 'I:\\Client_projects\\capture.py', reloading
+2025-06-07 01:25:36,294 - INFO -  * Restarting with stat
+2025-06-07 01:25:38,481 - INFO - Starting 1-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:25:38,481 - ERROR - 1-minute capture failed: name 'time' is not defined
+2025-06-07 01:27:12,646 - INFO - Starting 1-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:27:12,688 - INFO - 1-minute capture successful: 1 packets, 0.12KB in 0.0s
+2025-06-07 01:31:09,452 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:31:09,483 - WARNING - No packets captured in 5-minute window
+2025-06-07 01:32:05,644 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:32:05,767 - INFO - 5-minute capture successful: 1 packets, 1.52KB in 0.0s
+2025-06-07 01:37:01,954 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:37:01,959 - INFO - 5-minute capture successful: 1 packets, 1.52KB in 0.0s
+2025-06-07 01:37:37,079 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:37:37,084 - INFO - 5-minute capture successful: 1 packets, 0.12KB in 0.0s
+2025-06-07 01:37:37,084 - INFO - Processing output\5min_192_168_1_177_20250607_013737.pcap (size: 0.12 KB)
+2025-06-07 01:37:37,087 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_013737_processed.json
+2025-06-07 01:37:37,929 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-07 01:37:37,930 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 01:37:37,934 - INFO -  * Restarting with stat
+2025-06-07 01:37:38,955 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 01:37:39,008 - INFO - 5-minute capture successful: 1 packets, 0.12KB in 0.0s
+2025-06-07 01:37:39,008 - INFO - Processing output\5min_192_168_1_177_20250607_013738.pcap (size: 0.12 KB)
+2025-06-07 01:37:39,012 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_013738_processed.json
+2025-06-07 01:37:39,033 - WARNING -  * Debugger is active!
+2025-06-07 01:37:39,040 - INFO -  * Debugger PIN: 737-680-973
+2025-06-07 01:37:47,175 - INFO - 127.0.0.1 - - [07/Jun/2025 01:37:47] "GET / HTTP/1.1" 200 -
+2025-06-07 02:38:19,084 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:38:23,083 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 4.0s
+2025-06-07 02:39:02,161 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:39:03,081 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 0.9s
+2025-06-07 02:39:03,081 - INFO - Processing output\5min_192_168_1_177_20250607_023902.pcap (size: 0.10 KB)
+2025-06-07 02:39:03,103 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_023902_processed.json
+2025-06-07 02:39:04,544 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-07 02:39:04,544 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 02:39:04,601 - INFO -  * Restarting with stat
+2025-06-07 02:39:05,709 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:39:08,120 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 2.4s
+2025-06-07 02:39:08,120 - INFO - Processing output\5min_192_168_1_177_20250607_023905.pcap (size: 0.10 KB)
+2025-06-07 02:39:08,125 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_023905_processed.json
+2025-06-07 02:39:08,151 - WARNING -  * Debugger is active!
+2025-06-07 02:39:08,194 - INFO -  * Debugger PIN: 737-680-973
+2025-06-07 02:39:25,670 - INFO - 127.0.0.1 - - [07/Jun/2025 02:39:25] "GET / HTTP/1.1" 200 -
+2025-06-07 02:41:47,546 - INFO - Starting 5-minute capture: 192.168.1.144, filter: host 192.168.1.144 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:41:48,084 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 0.5s
+2025-06-07 02:42:02,673 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:42:03,085 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 0.4s
+2025-06-07 02:42:03,085 - INFO - Processing output\5min_192_168_1_177_20250607_024202.pcap (size: 0.10 KB)
+2025-06-07 02:42:03,152 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_024202_processed.json
+2025-06-07 02:42:04,033 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-06-07 02:42:04,034 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 02:42:04,036 - INFO -  * Restarting with stat
+2025-06-07 02:42:05,268 - INFO - Starting 5-minute capture: 192.168.1.177, filter: host 192.168.1.177 and (port 80 or port 8080 or port 8888 or port 554), max_size: 1000KB
+2025-06-07 02:42:08,081 - INFO - 5-minute capture successful: 1 packets, 0.10KB in 2.8s
+2025-06-07 02:42:08,081 - INFO - Processing output\5min_192_168_1_177_20250607_024205.pcap (size: 0.10 KB)
+2025-06-07 02:42:08,085 - INFO - Successfully processed 1 packets -> output\5min_192_168_1_177_20250607_024205_processed.json
+2025-06-07 02:42:08,109 - WARNING -  * Debugger is active!
+2025-06-07 02:42:08,118 - INFO -  * Debugger PIN: 737-680-973
+2025-06-07 02:42:12,451 - INFO - 127.0.0.1 - - [07/Jun/2025 02:42:12] "GET / HTTP/1.1" 200 -

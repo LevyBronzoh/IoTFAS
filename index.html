@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Printer Forensic Data</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <style>
+        .hash {
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .protocol-badge {
+            font-size: 0.8em;
+        }
+        .file-info {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .hex-payload {
+            font-family: monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .ascii-payload {
+            font-family: monospace;
+            background-color: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <!-- Header with File Information -->
+        <div class="file-info mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="h5">Analysis Session</h2>
+                    <p class="mb-1"><strong>PCAP File:</strong> {{ pcap_filename }}</p>
+                    <p class="mb-1"><strong>JSON File:</strong> {{ json_filename }}</p>
+                    <p class="mb-0"><strong>Total Packets:</strong> {{ data|length }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h5">Data Integrity</h2>
+                    <p class="mb-1"><strong>PCAP SHA-256:</strong> <span class="hash">{{ pcap_hash }}</span></p>
+                    <p class="mb-0"><strong>JSON SHA-256:</strong> <span class="hash">{{ json_hash }}</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="h5 mb-0">Network Traffic Analysis</h2>
+                    <div>
+                        <button id="exportCsv" class="btn btn-sm btn-outline-light me-2">
+                            <i class="bi bi-file-earmark-spreadsheet"></i> Export CSV
+                        </button>
+                        <button id="exportPdf" class="btn btn-sm btn-outline-light">
+                            <i class="bi bi-file-earmark-pdf"></i> Export PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <canvas id="protocolChart"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="trafficOverTime"></canvas>
+                    </div>
+                </div>
+
+                <h3 class="h5 mb-3">Packet Details</h3>
+                <div class="table-responsive">
+                    <table id="packetTable" class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Timestamp</th>
+                                <th>Source IP</th>
+                                <th>Destination IP</th>
+                                <th>Protocol</th>
+                                <th>Size</th>
+                                <th>Payload</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for packet in data %}
+                            <tr>
+                                <td>{{ packet.packet_number }}</td>
+                                <td>{{ packet.timestamp }}</td>
+                                <td>{{ packet.src_ip }}</td>
+                                <td>{{ packet.dst_ip }}</td>
+                                <td>
+                                    <span class="badge protocol-badge 
+                                        {% if packet.protocol == 'TCP' %}bg-success
+                                        {% elif packet.protocol == 'UDP' %}bg-warning text-dark
+                                        {% else %}bg-secondary{% endif %}">
+                                        {{ packet.protocol }}
+                                    </span>
+                                </td>
+                                <td>{{ packet.size }} bytes</td>
+                                <td>
+                                    {% if packet.payload %}
+                                        <span class="d-inline-block text-truncate" style="max-width: 150px;">
+                                            {{ packet.payload.hex|truncate(20) }}
+                                        </span>
+                                    {% else %}
+                                        <span class="text-muted">None</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if packet.payload %}
+                                    <button class="btn btn-sm btn-outline-primary view-payload" 
+                                        data-hex="{{ packet.payload.hex }}"
+                                        data-ascii="{{ packet.payload.ascii }}"
+                                        data-length="{{ packet.payload.length }}">
+                                        <i class="bi bi-eye"></i> Inspect
+                                    </button>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payload Inspection Modal -->
+        <div class="modal fade" id="payloadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Payload Inspection</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <span class="badge bg-info">Length: <span id="payloadLength">0</span> bytes</span>
+                        </div>
+                        <h6>Hex View</h6>
+                        <div class="hex-payload mb-3" id="hexPayload"></div>
+                        <h6>ASCII View</h6>
+                        <div class="ascii-payload" id="asciiPayload"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add this to index.html -->
+<div class="alert alert-info d-none" id="debugInfo">
+  Loaded {{ data|length }} packets from {{ json_filename }}
+</div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTable with sorting by timestamp descending
+            $('#packetTable').DataTable({
+                order: [[1, 'desc']],
+                pageLength: 25,
+                dom: '<"top"lf>rt<"bottom"ip>'
+            });
+
+            // Protocol Distribution Chart
+            const protocolCounts = {
+                TCP: {{ data|selectattr('protocol', 'equalto', 'TCP')|list|length }},
+                UDP: {{ data|selectattr('protocol', 'equalto', 'UDP')|list|length }},
+                Other: {{ data|rejectattr('protocol', 'equalto', 'TCP')|rejectattr('protocol', 'equalto', 'UDP')|list|length }}
+            };
+
+            const protocolCtx = document.getElementById('protocolChart').getContext('2d');
+            new Chart(protocolCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(protocolCounts),
+                    datasets: [{
+                        data: Object.values(protocolCounts),
+                        backgroundColor: [
+                            '#28a745', // TCP
+                            '#ffc107', // UDP
+                            '#6c757d'  // Other
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'right' },
+                        title: {
+                            display: true,
+                            text: 'Protocol Distribution'
+                        }
+                    }
+                }
+            });
+
+            // Traffic Over Time Chart
+            const timeCtx = document.getElementById('trafficOverTime').getContext('2d');
+            new Chart(timeCtx, {
+                type: 'line',
+                data: {
+                    labels: [
+                        {% for packet in data|sort(attribute='timestamp') %}
+                            "{{ packet.timestamp }}",
+                        {% endfor %}
+                    ],
+                    datasets: [{
+                        label: 'Packet Size (bytes)',
+                        data: [
+                            {% for packet in data|sort(attribute='timestamp') %}
+                                {{ packet.size }},
+                            {% endfor %}
+                        ],
+                        backgroundColor: 'rgba(13, 110, 253, 0.2)',
+                        borderColor: 'rgba(13, 110, 253, 1)',
+                        borderWidth: 1,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Traffic Over Time'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Size (bytes)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Payload Modal
+            $('.view-payload').click(function() {
+                const hex = $(this).data('hex');
+                const ascii = $(this).data('ascii');
+                const length = $(this).data('length');
+                
+                $('#payloadLength').text(length);
+                $('#hexPayload').text(formatHexDump(hex));
+                $('#asciiPayload').text(ascii);
+                
+                new bootstrap.Modal('#payloadModal').show();
+            });
+
+            // Format hex payload for better readability
+            function formatHexDump(hex) {
+                if (!hex) return '';
+                let result = '';
+                for (let i = 0; i < hex.length; i += 32) {
+                    const chunk = hex.substr(i, 32);
+                    let line = '';
+                    for (let j = 0; j < chunk.length; j += 2) {
+                        line += chunk.substr(j, 2) + ' ';
+                    }
+                    result += line.trim() + '\n';
+                }
+                return result;
+            }
+
+            // Export to CSV
+            $('#exportCsv').click(function() {
+                let csv = 'No,Timestamp,Source IP,Destination IP,Protocol,Size,Payload Hex,Payload ASCII\n';
+                {% for packet in data %}
+                csv += `{{ packet.packet_number }},"{{ packet.timestamp }}","{{ packet.src_ip }}","{{ packet.dst_ip }}","{{ packet.protocol }}",{{ packet.size }},"{{ packet.payload.hex if packet.payload else '' }}","{{ packet.payload.ascii if packet.payload else '' }}"\n`;
+                {% endfor %}
+                
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = '{{ pcap_filename|replace(".pcap", "") }}_forensic_data.csv';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+
+            // Export to PDF
+            $('#exportPdf').click(function() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                
+                // Title
+                doc.setFontSize(18);
+                doc.text('IoT Printer Forensic Report', 105, 15, { align: 'center' });
+                
+                // Metadata
+                doc.setFontSize(10);
+                doc.text(`PCAP File: {{ pcap_filename }}`, 14, 25);
+                doc.text(`JSON File: {{ json_filename }}`, 14, 30);
+                doc.text(`Total Packets: {{ data|length }}`, 14, 35);
+                
+                // Table
+                doc.autoTable({
+                    head: [['#', 'Timestamp', 'Source IP', 'Dest IP', 'Protocol', 'Size']],
+                    body: [
+                        {% for packet in data %}
+                        [
+                            {{ packet.packet_number }},
+                            '{{ packet.timestamp }}',
+                            '{{ packet.src_ip }}',
+                            '{{ packet.dst_ip }}',
+                            '{{ packet.protocol }}',
+                            '{{ packet.size }} bytes'
+                        ],
+                        {% endfor %}
+                    ],
+                    startY: 45,
+                    styles: { fontSize: 8 },
+                    columnStyles: { 0: { cellWidth: 10 } }
+                });
+                
+                doc.save('{{ pcap_filename|replace(".pcap", "") }}_forensic_report.pdf');
+            });
+        });
+    </script>
+</body>
+</html>
